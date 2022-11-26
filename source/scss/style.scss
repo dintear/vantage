@@ -1,5 +1,209 @@
+// Import general styles
 @import 'core/variables';
 @import 'core/mixins';
 @import 'core/normalize';
 @import 'core/typography';
 @import 'core/skeleton';
+
+
+// = Header = //
+.header {
+    background-color: $dark-bgcolor;
+    &__inner {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 360px;
+    }
+    z-index: 100;
+}
+
+.header-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 320px;
+
+    margin: 0 auto;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    background-color: $primary-color;
+}
+
+.header-slog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    @include adaptiveFontSize(13, 11);
+
+    cursor: pointer;
+    span {
+        margin-right: 8px;
+
+        @include adaptiveFontSize(12, 10);
+
+        opacity: 0.75;
+    }
+    svg {
+        height: 16px;
+
+        margin-left: 8px;
+    }
+}
+// = / Header = //
+
+
+
+// = Navigation = //
+.menu {
+    display: inline-block;
+}
+
+.menu-item {
+    display: inline-block;
+    padding: 0;
+    &:not(:last-child) {
+        margin-right: 32px;
+    }
+    &__link {
+        transition: color .3s;
+
+        padding: 4px;
+
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 3px;
+        @include adaptiveFontSize(11, 9);
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+// = / Navigation = //
+
+
+
+// = Intro = //
+.intro {
+    background-color: $dark-bgcolor;
+}
+
+.intro-content {
+    position: relative;
+    &__rect {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        height: 40%;
+        width: 34%;
+
+        background-color: $primary-color;
+        z-index: 10;
+    }
+}
+// = / Intro = //
+
+
+
+// = Intro Socials = //
+.socials {
+    width: 100%;
+
+    padding-left: 4px;
+
+    background-color: $light-bgcolor;
+    &__link {
+        transition: color .3s;
+
+        line-height: 600%;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        text-decoration: none;
+        @include adaptiveFontSize(12, 10);
+        &:not(:last-child) {
+            margin-right: 36px;
+        }
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+// = / Intro Socials = //
+
+
+
+// = Intro card = //
+.intro-card {
+    position: absolute;
+    top: 64px;
+    right: 64px;
+
+    max-width: 580px;
+
+    padding: 64px;
+
+    background-color: white;
+    z-index: 90;
+    &__subtitle {
+        color: $primary-color;
+        line-height: 150%;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        @include adaptiveFontSize(11, 9);
+    }
+    &__title {
+        text-transform: capitalize;
+    }
+    &__text {
+        margin-top: 32px;
+        margin-bottom: 12px;
+    }
+}
+
+.intro-card-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__btn {
+        transition: transform .3s;
+
+        flex: 0 0 48%;
+
+        padding-top: 24px;
+        padding-bottom: 24px;
+
+        color: white;
+        line-height: 150%;
+        letter-spacing: 3px;
+        text-align: center;
+        text-transform: uppercase;
+        @include adaptiveFontSize(12, 10);
+
+        cursor: pointer;
+        &:first-child {
+            background-color: $primary-color;
+        }
+        &:last-child {
+            background-color: $dark-bgcolor;
+        }
+        &:hover {
+            transform: scale(0.95);
+        }
+    }
+}
+// = / Intro card = //

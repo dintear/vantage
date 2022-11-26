@@ -2,7 +2,7 @@
 @mixin embeddingFont($fontName, $fileName, $weight, $style) {
     @font-face {
         font-family: $fontName;
-        src: url("../../fonts/#{$fileName}.ttf") format("truetype");
+        src: url("../../fonts/#{$fontName}/#{$fileName}.ttf") format("truetype");
         font-weight: $weight;
         font-style: $style;
         font-variant: normal;
