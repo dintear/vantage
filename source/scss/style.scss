@@ -233,6 +233,123 @@
 
 
 
+// = Projects = //
+.projects {
+    position: relative;
+    &__bgcolor {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+
+        height: 40%;
+        width: 100%;
+
+        background-color: $light-bgcolor;
+    }
+}
+
+.projects-list {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.projects-item {
+    position: relative;
+
+    flex: 0 0 32%;
+
+    height: 340px;
+    width: 100%;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &::before {
+        content: "NEW";
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        padding: 8px 32px;
+
+        color: white;
+        letter-spacing: 3px;
+        font-family: $base-font;
+        @include adaptiveFontSize(11, 9);
+
+        background-color: $dark-bgcolor;
+    }
+
+    &__name {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        width: 90%;
+
+        padding: 16px 0 24px;
+
+        color: white;
+        text-align: center;
+        text-transform: capitalize;
+
+        background-color: $dark-bgcolor;
+
+        z-index: 30;
+    }
+
+    &__direction {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        width: 50%;
+
+        padding-top: 8px;
+        padding-bottom: 80px;
+
+        color: white;
+        letter-spacing: 3px;
+        text-align: center;
+        text-transform: uppercase;
+        @include adaptiveFontSize(11, 9);
+
+        background-color: $primary-color;
+
+        z-index: 10;
+    }
+
+    &__lines {
+        span {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            bottom: 0;
+
+            height: 100%;
+            width: 1px;
+
+            background-color: white;
+
+            z-index: 20;
+
+            &:first-child {
+                left: 25%;
+            }
+
+            &:last-child {
+                left: 75%;
+            }
+        }
+    }
+}
+
+// = / Projects = //
+
+
+
 // = Services = //
 .services-content {
     padding-top: 100px;
