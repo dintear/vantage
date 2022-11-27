@@ -51,7 +51,7 @@
     color: white;
     @include adaptiveFontSize(13, 11);
 
-    cursor: pointer;
+    cursor: default;
 
     span {
         margin-right: 8px;
@@ -233,9 +233,128 @@
 
 
 
+// = About = //
+.about {
+    padding-top: 128px;
+
+    background-color: $light-bgcolor;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-heading {
+    &__subtitle {
+        color: $primary-color;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        @include adaptiveFontSize(12, 10);
+    }
+    &__title {
+        text-transform: capitalize;
+    }
+}
+
+.about-description {
+    flex: 0 0 calc(100% - 480px);
+    &__paragraph {
+        margin-top: 16px;
+    }
+}
+
+// = / About = //
+
+
+
+// = News = //
+.news {
+    flex: 0 0 360px;
+}
+
+.news-item {
+    &__date {
+        color: $primary-color;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        @include adaptiveFontSize(12, 10);
+        span {
+            display: inline-block;
+            width: 16px;
+        }
+    }
+    &__title {
+        margin-top: 8px;
+
+        & > a {
+            transition: color .3s;
+
+            text-decoration: none;
+            text-transform: capitalize;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+    &:not(:last-child) {
+        margin-bottom: 64px;
+    }
+}
+
+// = / News = //
+
+
+
+// = Advantage = //
+.advantage {
+    padding-top: 80px;
+    padding-bottom: 128px;
+
+    background-color: $light-bgcolor;
+}
+
+.advantage-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__dot {
+        height: 9px;
+        width: 9px;
+
+        background-color: $primary-color;
+    }
+}
+
+.advantage-item {
+    &__number {
+        font-weight: 700;
+        font-family: $heading-font;
+        text-transform: uppercase;
+        @include adaptiveFontSize(60, 40);
+    }
+
+    &__text {
+        margin-top: 20px;
+
+        color: $primary-color;
+        text-align: center;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        @include adaptiveFontSize(12, 10);
+    }
+}
+
+// = / Advantage = //
+
+
+
 // = Projects = //
 .projects {
     position: relative;
+
     &__bgcolor {
         position: absolute;
         left: 0;
@@ -265,6 +384,7 @@
 
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
 
     &::before {
         content: "NEW";
